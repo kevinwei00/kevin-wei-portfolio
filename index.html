@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani:700|Roboto+Condensed&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <title>Kevin Wei - Full Stack Developer</title>
+</head>
+<body>
+  <nav role="navigation">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <h1 class="nav-logo__content">
+          <a href="#" class="no-hover-style">KEVIN WEI</a>
+        </h1>
+      </div>
+      <ul class="nav-links">
+        <a href="index.html#about"><li class="nav-links__link">About</li></a>
+        <a href="index.html#projects"><li class="nav-links__link">Projects</li></a>
+      </ul>
+    </div>
+  </nav>
+  <main role="main">
+    <header role="banner">
+      <div class="content-block">
+        <h1>HI, I'M KEVIN</h1>
+        I'm a full stack developer. I was a game developer in my past life.
+      </div>
+      <p class="image-credit">
+        Image © <a href="#" target="_blank">Deus Ex</a>
+      </p>
+    </header>
+    <section id="about">
+      <div class="content-block">
+        <h2>ABOUT</h2>
+        <img src="images/profile-pic.png" alt="Profile Picture" class="profile-pic">
+        <p>
+          I thrive on identifying and engineering solutions, building applications that add value to product and pipeline, and attacking 
+          technical challenges with systematic precision. I see things beyond their face value and will frequently deep dive into how 
+          something works. My pursuit of clean, maintainable software architecture is evident in every work that I produce. My experience 
+          on team-based projects has given me the discipline to adhere to best practices within any stack, which not only enriches my 
+          collaborators' work, but also grants me the keen eye for detail that is required for succeeding in tech.
+        </p>
+        <ul class="contact-info">
+          <li class="contact-info__link">
+            <a href="#" target="_blank"><img src="images/email-icon.png" alt="Email Icon" class="contact-info__link__img"></a>
+          </li>
+          <li class="contact-info__link">
+            <a href="https://github.com/kevinwei00" target="_blank"><img src="images/github-icon.png" alt="GitHub Icon" class="contact-info__link__img"></a>
+          </li>
+          <li class="contact-info__link">
+            <a href="https://www.linkedin.com/in/kevin-wei-17801816" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn Icon" class="contact-info__link__img"></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="content-block">
+        <h2>PROJECTS</h2>
+        <div class="project">
+          <a href="https://thinkful-ei-gecko.github.io/kevin-bookmarks-app" target="_blank"><h3 class="project__name">BOOKMARKS APP</h3></a>
+          <a href="https://thinkful-ei-gecko.github.io/kevin-bookmarks-app" target="_blank" class="no-hover-style"><img src="images/bookmarks-app.png" alt="Bookmarks App" class="project__img"></a>
+          <ul class="project__tech-stack">
+            <li class="project__tech-stack__tool">HTML5</li>
+            <li class="project__tech-stack__tool">CSS3</li>
+            <li class="project__tech-stack__tool">jQuery</li>
+            <li class="project__tech-stack__tool">AJAX</li>
+          </ul>
+          <p class="project__desc">
+            This is the very first front-end web application that I built, which allows users to create and delete bookmarks. With this project, I familiarized
+            myself with fetching from RESTful API endpoints, not directly manipulating the DOM (opting instead to update properties in a local store and 
+            re-rendering the page), as well as modularizing code through IIFE's. Since this was a learning assignment, we used older techniques to ramp us up 
+            to a more modern workflow (i.e. handling the UI with jQuery instead of React). I kept the design intentionally minimal to focus on the application 
+            architecture and functionality.
+          </p>
+          <div class="project__links">
+            <a class="project__links__button no-hover-style" href="https://thinkful-ei-gecko.github.io/kevin-bookmarks-app" target="_blank">Live Demo</a>
+            <a class="project__links__button no-hover-style" href="https://github.com/thinkful-ei-gecko/kevin-bookmarks-app" target="_blank">Source Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer role="content-info">
+    <ul class="footer-links">
+      <a href="#" target="_blank"><li class="footer-links__link">Email</li></a>
+      <a href="https://github.com/kevinwei00" target="_blank"><li class="footer-links__link">GitHub</li></a>
+      <a href="https://www.linkedin.com/in/kevin-wei-17801816" target="_blank"><li class="footer-links__link">LinkedIn</li></a>
+    </ul>
+  </footer>
+</body>
+</html>
