@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 *, *:before, *:after {
@@ -260,6 +261,13 @@ section {
 
 }
 
+@media screen and (max-width: 640px) {
+  /* Stretch to entire container on smaller screens */
+  .project__tech-stack {
+    width: 100%;
+  }
+}
+
 /* iPhone Plus, Pixel 2 */
 @media screen and (max-width: 415px) {
   :root {
@@ -276,11 +284,6 @@ section {
 
   .nav-links__link {
     margin: 10.575px 12.5px;
-  }
-
-  /* Stretch to entire container on smaller screens */
-  .project__tech-stack {
-    width: 100%;
   }
 }
 
