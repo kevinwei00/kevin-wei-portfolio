@@ -9,7 +9,6 @@ html {
 }
 
 :root {
-  --content-width: 1024px;
   --heading-size: 60px;
   --body-size: 20px;
   --logo-size: 40px;
@@ -17,6 +16,7 @@ html {
   --color-white-link: #fff;
   --color-black-main: #111111;
   --color-black-banner: #0f0f0f;
+  --color-red-link: #ce181e;
 }
 
 h1,
@@ -85,8 +85,6 @@ nav {
 .contact-info {
   list-style: none;
   display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 0;
 }
 
@@ -99,7 +97,9 @@ nav {
 }
 
 .contact-info {
-  margin: 80px 0 0;
+  margin: 80px auto 0;
+  text-align: center;
+  width: 50%;
 }
 
 .nav-links__link,
@@ -108,27 +108,35 @@ nav {
 }
 
 .contact-info__link {
-  margin: 0 20px;
+  flex: 1;
 }
 
 .contact-info__link__img {
   max-width: 60px;
   max-height: 60px;
+  transition: all .15s ease-in-out;
+}
+
+.contact-info__link__img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: all .15s ease-in-out;
 }
 
 a, /* Includes .nav-logo__content */
-.contact-info__link__img {
+a:visited,
+a:active {
   text-decoration: none;
   color: var(--color-white-link);
   transition: transform .15s ease-in-out;
 }
 
-a:not(.no-hover-style):hover,
-.contact-info__link__img:hover {
+a:not(.no-hover-style):hover {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
-  filter: brightness(0.5) sepia(1) saturate(10000%) hue-rotate(-17deg);
+  color: var(--color-red-link);
   transition: transform .15s ease-in-out;
 }
 
@@ -149,7 +157,12 @@ section {
 
 .content-block {
   margin: 0 auto;
-  max-width: var(--content-width);
+  padding: 0 20px;
+  max-width: 1024px;
+}
+
+.emphasis {
+  color: var(--color-red-link);
 }
 
 .image-credit {
@@ -188,16 +201,16 @@ section {
 .project__tech-stack {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: center;
-  padding: 0;
-  margin: 20px auto;
-  width: 50%;
+  padding: 0 5vw;
   font-style: italic;
+  text-align: center;
 }
 
 .project__tech-stack__tool {
-  margin: 0 auto;
+  margin: 0 2vw;
+  flex: 1;
 }
 
 .project__desc {
@@ -209,12 +222,14 @@ section {
   justify-content: center;
 }
 
-.project__links__button {
+.project__links__button,
+.project__links__button:visited,
+.project__links__button:active {
   background-color: var(--color-white-main);
   color: var(--color-black-main);
-  padding: .5em;
-  margin: 0 15px;
-  width: fit-content;
+  padding: .5em 0;
+  margin: 0 20px;
+  width: 200px;
   text-align: center;
   transition: transform .15s ease-in-out;
 }
@@ -223,7 +238,7 @@ section {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
-  background-color: red;
+  background-color: var(--color-red-link);
   transition: transform .15s ease-in-out;
 }
 
@@ -236,10 +251,6 @@ section {
 
 /* iPad Pro */
 @media screen and (max-width: 1025px) {
-  :root {
-    --content-width: 720px;
-  }
-
   /* Align hero text to center of mobile screens */
   header {
     padding: 50% 0;
@@ -249,10 +260,16 @@ section {
   .content-block {
     display: flex;
     flex-direction: column;
+    max-width: 720px; /* Easier viewing on iPad Pro */
+  }
+
+  .contact-info {
+    margin: 40px auto 0;
+    width: 100%;
   }
 
   .profile-pic {
-    margin: 0 auto;
+    margin: 0 auto 20px;
   }
 }
 
@@ -261,22 +278,8 @@ section {
 
 }
 
-@media screen and (max-width: 640px) {
-  /* Stretch to entire container on smaller screens */
-  .project__tech-stack {
-    width: 100%;
-  }
-}
-
 /* iPhone Plus, Pixel 2 */
 @media screen and (max-width: 415px) {
-  :root {
-    --content-width: 350px;
-    --heading-size: 48px;
-    --body-size: 16px;
-    --logo-size: 32px;
-  }
-
   /* 'About' and 'Projects' don't need noticeable in-between spacing on smaller screens */
   .nav-links {
     margin: 0 12.5px 0 auto;
@@ -290,16 +293,15 @@ section {
 /* iPhone 6/7/8/X, Galaxy S5 */
 @media screen and (max-width: 376px) {
   :root {
-    --content-width: 320px;
-    --heading-size: 40px;
-    --body-size: 14px;
-    --logo-size: 26px;
+    --heading-size: 48px;
+    --body-size: 16px;
+    --logo-size: 32px;
   }
 }
 
 /* iPhone 5/SE */
 @media screen and (max-width: 321px) {
-  :root {
-    --content-width: 275px;
+  .content-block {
+    padding: 10px;
   }
 }
