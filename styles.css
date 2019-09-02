@@ -1,7 +1,6 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  height: 100%;
 }
 
 *, *:before, *:after {
@@ -145,7 +144,7 @@ header {
   position: relative;
   min-height: 100vh; /* Stretch section to entire viewport */
   padding: 15% 0;
-  background: url(images/deus-ex.jpg) no-repeat center center fixed;
+  background: url(images/deus-ex.jpg) no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
   text-align: center;
