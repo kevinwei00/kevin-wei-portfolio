@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -242,13 +241,6 @@ section {
   transition: transform .15s ease-in-out;
 }
 
-/* No motion sickness */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}
-
 /* iPad Pro */
 @media screen and (max-width: 1025px) {
   /* Align hero text to center of mobile screens */
@@ -302,6 +294,6 @@ section {
 /* iPhone 5/SE */
 @media screen and (max-width: 321px) {
   .content-block {
-    padding: 10px;
+    padding: 0 10px;
   }
 }
