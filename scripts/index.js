@@ -15,4 +15,7 @@ window.addEventListener('load', function() {
     e.preventDefault();
     document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' });
   });
+
+  // initialize parallax
+  var rellax = new Rellax('.rellax');
 });
