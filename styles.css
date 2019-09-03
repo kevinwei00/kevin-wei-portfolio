@@ -141,7 +141,7 @@ a:not(.no-hover-style):hover {
 .fixed-top {
   position: absolute;
   z-index: -10;
-  min-height: 100%;
+  min-height: 100vh;
   min-width: 100%;
   background: url(images/deus-ex.jpg) no-repeat center center;
   -webkit-background-size: cover;
