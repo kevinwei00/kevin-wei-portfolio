@@ -7,9 +7,9 @@ html {
 }
 
 :root {
-  --heading-size: 60px;
-  --body-size: 20px;
-  --logo-size: 40px;
+  --heading-size: 48px;
+  --logo-size: 32px;
+  --body-size: 16px;
   --color-white-main: #f0f0f0;
   --color-white-link: #fff;
   --color-black-main: #1a1a1a;
@@ -88,7 +88,7 @@ nav {
 }
 
 .nav-links {
-  margin: 0 0 0 auto;
+  margin: 0 12.5px 0 auto;
 }
 
 .footer-links {
@@ -96,12 +96,15 @@ nav {
 }
 
 .contact-info {
-  margin: 80px auto 0;
+  margin: 40px auto 0;
   text-align: center;
-  width: 50%;
+  width: 100%;
 }
 
-.nav-links__link,
+.nav-links__link {
+  margin: 10.575px 12.5px; /* Add top-bottom margins to expand the click region */
+}
+
 .footer-links__link {
   margin: 10.575px 25px; /* Add top-bottom margins to expand the click region */
 }
@@ -163,8 +166,10 @@ section {
 
 .content-block {
   margin: 0 auto;
-  padding: 0 20px;
-  max-width: 1024px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  max-width: 720px;
 }
 
 .emphasis {
@@ -181,8 +186,7 @@ section {
 .profile-pic {
   max-width: 188.33px;
   max-height: 218.66px;
-  margin-right: 80px;
-  float: left;
+  margin: 0 auto 20px;
 }
 
 .project {
@@ -246,59 +250,55 @@ section {
   transition: transform .15s ease-in-out;
 }
 
-/* iPad Pro */
-@media screen and (max-width: 1025px) {
-  /* Align hero text to center of mobile screens */
-  header {
-    padding: 50% 0;
-  }
-  
-  /* Stack elements on mobile screens (i.e. no text wrapping around profile pic) */
+/****************************************
+
+  PROGRESSIVE ENHANCEMENT Media Queries  
+
+*****************************************/
+
+@media screen and (min-width: 321px) {
   .content-block {
-    display: flex;
-    flex-direction: column;
-    max-width: 720px; /* Easier viewing on iPad Pro */
-  }
-
-  .contact-info {
-    margin: 40px auto 0;
-    width: 100%;
-  }
-
-  .profile-pic {
-    margin: 0 auto 20px;
+    padding: 0 20px;
   }
 }
 
-/* iPad */
-@media screen and (max-width: 769px) {
-
+@media screen and (min-width: 376px) {
+  :root {
+    --heading-size: 60px;
+    --logo-size: 40px;
+    --body-size: 20px;
+  }
 }
 
-/* iPhone Plus, Pixel 2 */
-@media screen and (max-width: 415px) {
-  /* 'About' and 'Projects' don't need noticeable in-between spacing on smaller screens */
+/************************************************************************
+  Increase the spacing between 'About' and 'Projects' on larger screens  
+*************************************************************************/
+@media screen and (min-width: 415px) {
   .nav-links {
-    margin: 0 12.5px 0 auto;
+    margin: 0 0 0 auto;
   }
 
   .nav-links__link {
-    margin: 10.575px 12.5px;
+    margin: 10.575px 25px;
   }
 }
 
-/* iPhone 6/7/8/X, Galaxy S5 */
-@media screen and (max-width: 376px) {
-  :root {
-    --heading-size: 48px;
-    --body-size: 16px;
-    --logo-size: 32px;
-  }
-}
-
-/* iPhone 5/SE */
-@media screen and (max-width: 321px) {
+/***************************************************************************
+  Text can wrap around profile pic on larger screens. Contact icons should  
+  also be contained within a limited width.
+****************************************************************************/
+@media screen and (min-width: 1025px) {
   .content-block {
-    padding: 0 10px;
+    display: block;
+    max-width: 1024px;
+  }
+
+  .contact-info {
+    margin: 80px auto 0;
+    width: 50%;
+  }
+
+  .profile-pic {
+    margin-right: 80px;
   }
 }
