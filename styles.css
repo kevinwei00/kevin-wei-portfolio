@@ -300,5 +300,6 @@ section {
 
   .profile-pic {
     margin-right: 80px;
+    float: left;
   }
 }
