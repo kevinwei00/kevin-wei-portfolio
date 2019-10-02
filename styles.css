@@ -24,8 +24,14 @@ h2 {
   text-align: center;
 }
 
-h3 {
+h3,
+.project__tech-stack__tool {
   font-family: 'Rajdhani', sans-serif;
+}
+
+h3 {
+  font-size: 2rem;
+  color: var(--color-red-link);
 }
 
 ::-moz-selection {
@@ -210,17 +216,14 @@ section {
 
 .project__tech-stack {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: block;
   padding: 0 5vw;
-  font-style: italic;
   text-align: center;
 }
 
 .project__tech-stack__tool {
-  margin: 0 2vw;
-  flex: 1;
+  display: inline-block;
+  margin: 0 .5vw;
 }
 
 .project__desc {
