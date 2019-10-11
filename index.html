@@ -74,7 +74,11 @@
             <h3 class="project__name">BOOKMARKS APP</h3>
           </a>
           <a href="https://thinkful-ei-gecko.github.io/kevin-bookmarks-app" target="_blank" class="no-hover-style">
-            <img src="images/bookmarks-app.png" alt="Bookmarks App" class="project__img">
+            <picture>
+              <source media="(max-width: 415px)" srcset="images/bookmarks-app-415.png">
+              <source media="(max-width: 1025px)" srcset="images/bookmarks-app-1025.png">
+              <img src="images/bookmarks-app-max.png" alt="Bookmarks App" class="project__img">
+            </picture>
           </a>
           <ul class="project__tech-stack">
             <li class="project__tech-stack__tool">HTML5</li>
