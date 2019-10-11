@@ -81,7 +81,7 @@ nav {
 }
 
 .nav-logo__content {
-  font-size: var(--logo-size);
+  font: bold var(--logo-size) 'Rajdhani', sans-serif;
   margin: 0 0 0 25px; /* Match margin-right of .nav-links__link */
 }
 
