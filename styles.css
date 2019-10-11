@@ -108,11 +108,15 @@ nav {
 }
 
 .nav-links__link {
-  margin: 10.575px 12.5px; /* Add top-bottom margins to expand the click region */
+  display: inline-block;
+  margin: 0;
+  padding: 10.575px 12.5px; /* Add top-bottom margins to expand the click region */
 }
 
 .footer-links__link {
-  margin: 10.575px 25px; /* Add top-bottom margins to expand the click region */
+  display: inline-block;
+  margin: 0;
+  padding: 10.575px 25px; /* Add top-bottom margins to expand the click region */
 }
 
 .contact-info__link {
@@ -282,7 +286,7 @@ section {
   }
 
   .nav-links__link {
-    margin: 10.575px 25px;
+    padding: 10.575px 25px;
   }
 }
 
