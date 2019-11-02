@@ -194,9 +194,8 @@ section {
 }
 
 .profile-pic {
-  max-width: 188.33px;
-  max-height: 218.66px;
-  margin: 0 auto 20px;
+  max-height: 324px;
+  margin: -20px auto 20px;
 }
 
 .project {
@@ -301,12 +300,13 @@ section {
   }
 
   .contact-info {
-    margin: 80px auto 0;
+    margin: 80px 0 0 -70px;
     width: 50%;
+    float: left;
   }
 
   .profile-pic {
-    margin-right: 80px;
+    margin-right: 40px;
     float: left;
   }
 }
