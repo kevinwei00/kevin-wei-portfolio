@@ -264,10 +264,33 @@ nav {
 }
 
 .project__img {
+  position: relative;
   max-width: 90%;
-  border: 3px solid black;
-  display: block;
   margin: 0 auto;
+}
+
+.project__img__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .25s ease;
+  background-color: var(--color-black-main);
+}
+
+.project__img:hover .project__img__overlay{
+  opacity: 0.8;
+}
+
+.project__img__overlay__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .project__tech-stack {
