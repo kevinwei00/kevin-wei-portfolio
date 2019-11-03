@@ -118,8 +118,7 @@ a:not(.no-hover-style):hover {
 
 header {
   position: relative;
-  min-height: -webkit-fill-available; /* Stretch section to entire viewport */
-  min-height: 100vh; /* fallback */
+  min-height: 100vh; /* Stretch section to entire viewport */
   padding: 15% 0;
 }
 
