@@ -118,7 +118,8 @@ a:not(.no-hover-style):hover {
 
 header {
   position: relative;
-  height: 100vh; /* Stretch section to entire viewport */
+  min-height: -webkit-fill-available; /* Stretch section to entire viewport */
+  min-height: 100vh; /* fallback */
   padding: 15% 0;
 }
 
@@ -451,30 +452,5 @@ nav {
 
   .down-arrow {
     bottom: 0;
-  }
-}
-
-/****************************************
-
-  Full height header fixes
-
-*****************************************/
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
-  header {
-    height: 1024px;
-  }
-}
-
-/* iPad with landscape orientation */
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
-  header {
-    height: 768px;
-  }
-}
-
-/* iPhone 5 aspect ratio */
-@media screen and (device-aspect-ratio: 40/71) {
-  header {
-    height: 500px;
   }
 }
