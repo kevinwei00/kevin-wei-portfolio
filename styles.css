@@ -182,6 +182,10 @@ section {
   max-width: 720px;
 }
 
+.hero {
+  margin-top: 20vh;
+}
+
 .emphasis {
   color: var(--color-red-link);
 }
@@ -310,12 +314,16 @@ section {
 
 /***************************************************************************
   Text can wrap around profile pic on larger screens. Contact icons should  
-  also be contained within a limited width.
+  also be contained within a limited width. Hero should be higher up.
 ****************************************************************************/
 @media screen and (min-width: 1025px) {
   .content-block {
     display: block;
     max-width: 1024px;
+  }
+
+  .hero {
+    margin-top: 5vh;
   }
 
   .contact-info {
