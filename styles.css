@@ -242,6 +242,21 @@ nav {
   margin-top: 20vh;
 }
 
+.down-arrow {
+  position: absolute;
+  left: 50%;
+  margin-left: -2rem; /* half of of child element width */
+  bottom: 1rem;
+}
+
+.down-arrow > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 4rem;
+}
+
 .image-credit {
   position: absolute;
   right: 10px;
