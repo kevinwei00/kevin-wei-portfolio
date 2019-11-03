@@ -192,6 +192,11 @@ nav {
   padding: 10.575px 12.5px; /* Add top-bottom margins to expand the click region */
 }
 
+.nav-links__link:active,
+.nav-links__link:focus {
+  text-decoration: underline;
+}
+
 .footer-links__link {
   display: inline-block;
   margin: 0;
