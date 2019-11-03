@@ -1,11 +1,60 @@
+/****************************************
+
+  CSS Reset
+
+*****************************************/
+
+/* Box sizing */
 html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
+/* Set core body defaults */
+body {
+  margin: 0;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles and padding on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+/* Anchor elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/****************************************
+
+  Base selectors
+
+*****************************************/
 :root {
   --heading-size: 48px;
   --logo-size: 32px;
@@ -20,8 +69,9 @@ html {
 
 h1,
 h2 {
-  font: bold var(--heading-size) 'Rajdhani', sans-serif;
-  text-align: center;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: var(--heading-size);
+  font-weight: bold;
 }
 
 h3,
@@ -45,10 +95,37 @@ h3 {
 }
 
 body {
-  font: var(--body-size) 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: var(--body-size);
   color: var(--color-white-main);
   background-color: var(--color-black-main);
-  line-height: 1.5;
+}
+
+/* Includes .nav-logo__content */
+a {
+  text-decoration: none;
+  color: var(--color-white-link);
+  transition: transform 0.15s ease-in-out;
+}
+
+a:not(.no-hover-style):hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  color: var(--color-red-link);
+  transition: transform 0.15s ease-in-out;
+}
+
+header {
+  position: relative;
+  min-height: 100vh; /* Stretch section to entire viewport */
+  padding: 15% 0;
+}
+
+section {
+  min-height: 100vh; /* Stretch section to entire viewport */
+  padding: 60px 0 60px; /* Match to height of nav and footer */
+  background-color: var(--color-black-main);
 }
 
 nav,
@@ -68,6 +145,11 @@ nav {
   z-index: 10;
 }
 
+/****************************************
+
+  Class selectors
+
+*****************************************/
 .nav-inner {
   display: flex;
   justify-content: space-between;
@@ -88,9 +170,7 @@ nav {
 .nav-links,
 .footer-links,
 .contact-info {
-  list-style: none;
   display: flex;
-  padding: 0;
 }
 
 .nav-links {
@@ -103,7 +183,6 @@ nav {
 
 .contact-info {
   margin: 40px auto 0;
-  text-align: center;
   width: 100%;
 }
 
@@ -120,35 +199,20 @@ nav {
 }
 
 .contact-info__link {
-  flex: 1;
+  margin: 0 auto;
 }
 
 .contact-info__link__img {
   max-width: 60px;
   max-height: 60px;
-  transition: transform .15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
 }
 
 .contact-info__link__img:hover {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
-  transition: transform .15s ease-in-out;
-}
-
-/* Includes .nav-logo__content */
-a {
-  text-decoration: none;
-  color: var(--color-white-link);
-  transition: transform .15s ease-in-out;
-}
-
-a:not(.no-hover-style):hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  color: var(--color-red-link);
-  transition: transform .15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
 }
 
 .fixed-top {
@@ -161,19 +225,6 @@ a:not(.no-hover-style):hover {
   background-size: cover;
 }
 
-header {
-  position: relative;
-  min-height: 100vh; /* Stretch section to entire viewport */
-  padding: 15% 0;
-  text-align: center;
-}
-
-section {
-  min-height: 100vh; /* Stretch section to entire viewport */
-  padding: 60px 0 60px; /* Match to height of nav and footer */
-  background-color: var(--color-black-main);
-}
-
 .content-block {
   margin: 0 auto;
   padding: 0 10px;
@@ -184,10 +235,6 @@ section {
 
 .hero {
   margin-top: 20vh;
-}
-
-.emphasis {
-  color: var(--color-red-link);
 }
 
 .image-credit {
@@ -215,7 +262,6 @@ section {
 }
 
 .project__name {
-  text-align: center;
 }
 
 .project__img {
@@ -229,12 +275,11 @@ section {
   list-style: none;
   display: block;
   padding: 0 5vw;
-  text-align: center;
 }
 
 .project__tech-stack__tool {
   display: inline-block;
-  margin: 0 .5vw;
+  margin: 0 0.5vw;
 }
 
 .project__desc {
@@ -251,11 +296,10 @@ section {
 .project__links__button {
   background-color: var(--color-white-main);
   color: var(--color-black-main);
-  padding: .5em 0;
+  padding: 0.5em 0;
   margin: 8px 20px;
   width: 200px;
-  text-align: center;
-  transition: transform .15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
 }
 
 .project__links__button:hover {
@@ -263,16 +307,29 @@ section {
   -ms-transform: scale(1.1);
   transform: scale(1.1);
   background-color: var(--color-red-link);
-  transition: transform .15s ease-in-out;
-}
-
-.hidden {
-  display: none;
+  transition: transform 0.15s ease-in-out;
 }
 
 /****************************************
 
-  PROGRESSIVE ENHANCEMENT Media Queries  
+  Utility
+
+*****************************************/
+.hidden {
+  display: none;
+}
+
+.emphasis {
+  color: var(--color-red-link);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/****************************************
+
+  PROGRESSIVE ENHANCEMENT Media Queries
 
 *****************************************/
 
@@ -291,7 +348,7 @@ section {
 }
 
 /************************************************************************
-  Increase the spacing between 'About' and 'Projects' on larger screens  
+  Increase the spacing between 'About' and 'Projects' on larger screens
 *************************************************************************/
 @media screen and (min-width: 415px) {
   .nav-links {
@@ -304,7 +361,7 @@ section {
 }
 
 /************************************************************************
-  Unstack project buttons on wider screens  
+  Unstack project buttons on wider screens
 *************************************************************************/
 @media screen and (min-width: 720px) {
   .project__links {
@@ -313,7 +370,7 @@ section {
 }
 
 /***************************************************************************
-  Text can wrap around profile pic on larger screens. Contact icons should  
+  Text can wrap around profile pic on larger screens. Contact icons should
   also be contained within a limited width. Hero should be higher up.
 ****************************************************************************/
 @media screen and (min-width: 1025px) {
