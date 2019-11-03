@@ -239,7 +239,12 @@ nav {
 }
 
 .hero {
-  margin-top: 20vh;
+  position: absolute;
+  top: 20vh;
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+  margin: auto;
 }
 
 .down-arrow {
@@ -376,7 +381,6 @@ nav {
   PROGRESSIVE ENHANCEMENT Media Queries
 
 *****************************************/
-
 @media screen and (min-width: 321px) {
   .content-block {
     padding: 0 20px;
@@ -415,16 +419,12 @@ nav {
 
 /***************************************************************************
   Text can wrap around profile pic on larger screens. Contact icons should
-  also be contained within a limited width. Hero should be higher up.
+  also be contained within a limited width.
 ****************************************************************************/
 @media screen and (min-width: 1025px) {
   .content-block {
     display: block;
     max-width: 1024px;
-  }
-
-  .hero {
-    margin-top: 5vh;
   }
 
   .contact-info {
@@ -436,5 +436,20 @@ nav {
   .profile-pic {
     margin-right: 40px;
     float: left;
+  }
+}
+
+/****************************************
+
+  Fixes for Hero on specific screens
+
+*****************************************/
+@media screen and (orientation: landscape) and (max-height: 375px) {
+  .hero > h1 {
+    margin-bottom: 0;
+  }
+
+  .down-arrow {
+    bottom: 0;
   }
 }
