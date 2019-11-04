@@ -255,7 +255,7 @@ nav {
   position: absolute;
   left: 50%;
   margin-left: -2rem; /* half of child element width */
-  bottom: 1rem;
+  bottom: 5rem;
 }
 
 .down-arrow > a {
@@ -453,7 +453,7 @@ nav {
   Fixes for Hero on specific screens
 
 *****************************************/
-@media screen and (orientation: landscape) and (max-height: 375px) {
+@media screen and (orientation: landscape) and (max-height: 500px) {
   .hero > h1 {
     margin-bottom: 0;
   }
