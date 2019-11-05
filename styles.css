@@ -412,7 +412,8 @@ nav {
 }
 
 /************************************************************************
-  Increase the spacing between 'About' and 'Projects' on larger screens
+  Increase the spacing between 'About' and 'Projects' on larger screens.
+  Project desc should not hug card edges as paragraph grows wider.
 *************************************************************************/
 @media screen and (min-width: 415px) {
   .nav-links {
