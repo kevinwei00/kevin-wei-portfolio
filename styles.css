@@ -333,11 +333,18 @@ nav {
   list-style: none;
   display: block;
   padding: 0 5vw;
+  position: relative;
 }
 
 .project__tech-stack__tool {
   display: inline-block;
   margin: 0 0.5vw;
+}
+
+.project__separator {
+  margin: 0 auto 1em; /* Match bottom-margin to project__tech-stack */
+  border-bottom: 1px solid white;
+  width: 30%;
 }
 
 .project__desc {
